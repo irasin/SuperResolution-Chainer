@@ -1,7 +1,7 @@
 # SuperResolution-Chainer
 Super Resolution by Chainer(v3) and python3.  
 I used a [DenseNet](https://arxiv.org/abs/1608.06993)-based Generator and [SNGAN](https://drive.google.com/file/d/0B8HZ50DPgR3eSVV6YlF3XzQxSjQ/view) by [Chainer](https://github.com/pfnet-research/chainer-gan-lib) to train this model.   
-This repository just provides the generator model, acturally i have used GAN to train it.  
+This repository just provides the generator model, however, i have used GAN to train it actually.  
 If you have any question, please feel free to contact me.
 
 ## Usage
