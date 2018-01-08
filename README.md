@@ -11,27 +11,27 @@ If you have any question, please feel free to contact me.
 python compare_image --input_file/-i  filename
 ```
 
-It will downsize the given image to the low_resolution image with a factor=2generate, then upsize the lr image by bicubic and SR-method respectively to generate super resolution image of with a factor=2 and compare the PSNR/SSIM.
+It will downsize the given image to the low resolution image with a factor=2, then upsize it by bicubic and SR-method respectively to generate super resolution image with a factor=2 and compare the PSNR/SSIM between the SR image and ground truth.
 
 ### generate  
 ```
 python generate_2x --input_file/-i  filename
 ```
-It will generate a 2x SR image of the given image by SR-method  
+It will generate a 2x SR image of the given image by SR-method. 
 
 ## Result
 
 ### compare
-#### ground_truth
+#### ground truth
 ![image](https://github.com/irasin/SuperResolution-Chainer/blob/master/result/butterfly.png)
 
-#### low_resolution
+#### low resolution
 ![image](https://github.com/irasin/SuperResolution-Chainer/blob/master/result/butterfly_low.png)
 
 #### bicubic
 ![image](https://github.com/irasin/SuperResolution-Chainer/blob/master/result/butterfly_bic.png)
 
-#### super_resolution
+#### super resolution
 ![image](https://github.com/irasin/SuperResolution-Chainer/blob/master/result/butterfly_super.png)
 
 #### generate 2x
