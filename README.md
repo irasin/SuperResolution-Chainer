@@ -1,6 +1,6 @@
 # SuperResolution-Chainer
 Super Resolution by Chainer(v3) and python3.  
-I used a DenseNet-based Generator and SNGAN by Chainer to train this model.  
+I used a [DenseNet](https://arxiv.org/abs/1608.06993)-based Generator and [SNGAN](https://drive.google.com/file/d/0B8HZ50DPgR3eSVV6YlF3XzQxSjQ/view) by Chainer to train this model.  
 If you have any question, please feel free to contact me.
 
 ## Usage
