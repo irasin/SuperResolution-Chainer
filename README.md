@@ -7,14 +7,14 @@ If you have any question, please feel free to contact me.
 
 ### compare   
 ```
-python compare_image --input_file/-i  
+python compare_image --input_file/-i  filenaem
 ```
 
 It will generate the low_resolution, bicubic, SR-method image of the given image with factor=2 and compare the PSNR/SSIM
 
 ### generate  
 ```
-python generate_2x --input_file/-i  
+python generate_2x --input_file/-i  filename
 ```
 It will generate a 2x SR image of the given image by SR-method  
 
