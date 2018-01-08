@@ -1,7 +1,7 @@
 # SuperResolution-Chainer
 Super Resolution by Chainer(v3) and python3.  
-I used a [DenseNet](https://arxiv.org/abs/1608.06993)-based Generator and [SNGAN](https://drive.google.com/file/d/0B8HZ50DPgR3eSVV6YlF3XzQxSjQ/view) by Chainer to train this model. 
-This repository just provides the generator model, acturally i have used GAN to train it.
+I used a [DenseNet](https://arxiv.org/abs/1608.06993)-based Generator and [SNGAN](https://drive.google.com/file/d/0B8HZ50DPgR3eSVV6YlF3XzQxSjQ/view) by Chainer to train this model.   
+This repository just provides the generator model, acturally i have used GAN to train it.  
 If you have any question, please feel free to contact me.
 
 ## Usage
@@ -11,7 +11,7 @@ If you have any question, please feel free to contact me.
 python compare_image --input_file/-i  filename
 ```
 
-It will generate the low_resolution, bicubic, SR-method image of the given image with factor=2 and compare the PSNR/SSIM
+It will downsize the given image to the low_resolution image with a factor=2generate, then upsize the lr image by bicubic and SR-method respectively to generate super resolution image of with a factor=2 and compare the PSNR/SSIM.
 
 ### generate  
 ```
