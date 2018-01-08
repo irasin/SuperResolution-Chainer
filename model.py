@@ -52,19 +52,19 @@ class DenseBlock(chainer.Chain):
         return h
 
 
-class Transition(chainer.Chain):
-    def __init__(self, in_channel):
-        super(Transition, self).__init__()
-        with self.init_scope():
-            initialW = initializers.HeNormal()
-            self.conv1 = SNConvolution2D(in_channel, in_channel, 1, 1, 0, initialW=initialW)
-            self.conv2 = SNConvolution2D(in_channel, in_channel, 2, 2, 0, initialW=initialW)
+# class Transition(chainer.Chain):
+#     def __init__(self, in_channel):
+#         super(Transition, self).__init__()
+#         with self.init_scope():
+#             initialW = initializers.HeNormal()
+#             self.conv1 = SNConvolution2D(in_channel, in_channel, 1, 1, 0, initialW=initialW)
+#             self.conv2 = SNConvolution2D(in_channel, in_channel, 2, 2, 0, initialW=initialW)
 
-    def __call__(self, x):
-        h = F.relu(x)
-        h = self.conv1(h)
-        h = self.conv2(h)
-        return h
+#     def __call__(self, x):
+#         h = F.relu(x)
+#         h = self.conv1(h)
+#         h = self.conv2(h)
+#         return h
 
 
 class PixelShuffler(chainer.Chain):
