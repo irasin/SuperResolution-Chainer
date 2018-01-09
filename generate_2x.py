@@ -9,6 +9,7 @@
 import numpy as np
 import cv2
 import argparse
+import chainer
 from chainer import Variable, serializers
 from model import Generator
 
@@ -52,7 +53,8 @@ class Generate2X:
         """low resolution --> super resolution"""
         gen = self.gen
         image = self.tochainer(image)
-        sr = gen(image)
+        with chainer.using_config('train', False):
+            sr = gen(image)
         sr = np.asarray(np.clip(sr.data * 255, 0.0, 255.0), dtype=np.uint8)
         _, _, H, W = sr.shape
         sr = sr.reshape((3, H, W))
