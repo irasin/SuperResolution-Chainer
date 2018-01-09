@@ -10,6 +10,7 @@
 import numpy as np
 import cv2
 import argparse
+import chainer
 from chainer import Variable, serializers
 from skimage.measure import compare_ssim, compare_psnr, compare_mse
 from model import Generator
@@ -68,7 +69,8 @@ class GeneralGen:
         """low resolution --> super resolution"""
         image = self.tochainer(image)
         gen = self.gen
-        sr = gen(image)
+        with chainer.using_config('train', False):
+            sr = gen(image)
         sr = np.asarray(np.clip(sr.data * 255, 0.0, 255.0), dtype=np.uint8)
         _, _, H, W = sr.shape
         sr = sr.reshape((3, H, W))
